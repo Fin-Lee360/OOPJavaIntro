@@ -58,10 +58,10 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="601.0" prefWidth="937.0" VBox.vgrow="ALWAYS">
       <children>
-            <Button fx:id="ForwardButton" layoutX="420.0" layoutY="14.0" mnemonicParsing="false" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Forward" />
-            <Button fx:id="LeftButton" layoutX="14.0" layoutY="292.0" mnemonicParsing="false" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Left" />
+            <Button fx:id="ForwardButton" layoutX="420.0" layoutY="14.0" mnemonicParsing="false" onAction="#pressForwardButton" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Forward" />
+            <Button fx:id="LeftButton" layoutX="14.0" layoutY="292.0" mnemonicParsing="false" onAction="#pressLeftButton" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Left" />
             <Box depth="150.0" height="175.0" layoutX="775.0" layoutY="88.0" width="250.0" />
-            <Button fx:id="RightButton" layoutX="825.0" layoutY="322.0" mnemonicParsing="false" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Right" />
+            <Button fx:id="RightButton" layoutX="825.0" layoutY="322.0" mnemonicParsing="false" onAction="#pressRightButton" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Right" />
             <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="825.0" layoutY="329.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Images/Arrow-Free-Download-PNG.png" />
@@ -82,7 +82,7 @@
                   <Font size="22.0" />
                </font>
             </Label>
-            <DropdownButton fx:id="ChoiceBox" layoutX="652.0" layoutY="44.0">
+            <DropdownButton fx:id="ItemsCarried" layoutX="652.0" layoutY="44.0">
                 <items>
                     <MenuItem text="Choice 1" />
                     <MenuItem text="Choice 2" />
@@ -91,10 +91,10 @@
             </DropdownButton>
             <ImageView fx:id="itemView" fitHeight="100.0" fitWidth="107.0" layoutX="787.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="imageView" fitHeight="578.0" fitWidth="900.0" layoutY="-25.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="PickUpButton" layoutX="663.0" layoutY="141.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" text="Drop item" />
-            <Button fx:id="PickUpButton" layoutX="787.0" layoutY="140.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="83.0" text="Pick Up Item" />
+            <Button fx:id="PickUpButton" layoutX="663.0" layoutY="141.0" mnemonicParsing="false" onAction="#pressButton" prefHeight="25.0" prefWidth="91.0" text="Drop item" />
+            <Button fx:id="PickUpButton" layoutX="787.0" layoutY="140.0" mnemonicParsing="false" onAction="#pressPickUpButton" prefHeight="26.0" prefWidth="83.0" text="Pick Up Item" />
             <TextField fx:id="MessageField" layoutX="652.0" layoutY="176.0" onAction="#updateMessageField" prefHeight="26.0" prefWidth="250.0" />
-            <Button fx:id="ICWorld" layoutX="18.0" layoutY="14.0" mnemonicParsing="false" text="New World" />
+            <Button fx:id="ICWorld" layoutX="18.0" layoutY="14.0" mnemonicParsing="false" onAction="#doStartNewWorld" text="New World" />
       </children>
     </AnchorPane>
   </children>
