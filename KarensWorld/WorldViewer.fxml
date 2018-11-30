@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.DropdownButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Box?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <MenuBar prefHeight="24.0" prefWidth="644.0" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="601.0" prefWidth="937.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Button fx:id="ForwardButton" layoutX="420.0" layoutY="14.0" mnemonicParsing="false" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Forward" />
+            <Button fx:id="LeftButton" layoutX="14.0" layoutY="292.0" mnemonicParsing="false" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Left" />
+            <Box depth="150.0" height="175.0" layoutX="775.0" layoutY="88.0" width="250.0" />
+            <Button fx:id="RightButton" layoutX="825.0" layoutY="322.0" mnemonicParsing="false" opacity="0.0" prefHeight="60.0" prefWidth="60.0" text="Right" />
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="825.0" layoutY="329.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/Arrow-Free-Download-PNG.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="67.0" layoutX="15.0" layoutY="299.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/Arrow-Free-Download-PNG.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="95.0" layoutX="427.0" layoutY="14.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/arrow%20up.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="650.0" text="Inventory">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <DropdownButton fx:id="ChoiceBox" layoutX="652.0" layoutY="44.0">
+                <items>
+                    <MenuItem text="Choice 1" />
+                    <MenuItem text="Choice 2" />
+                    <MenuItem text="Choice 3" />
+                </items>
+            </DropdownButton>
+            <ImageView fx:id="itemView" fitHeight="100.0" fitWidth="107.0" layoutX="787.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imageView" fitHeight="578.0" fitWidth="900.0" layoutY="-25.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="PickUpButton" layoutX="663.0" layoutY="141.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" text="Drop item" />
+            <Button fx:id="PickUpButton" layoutX="787.0" layoutY="140.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="83.0" text="Pick Up Item" />
+            <TextField fx:id="MessageField" layoutX="652.0" layoutY="176.0" onAction="#updateMessageField" prefHeight="26.0" prefWidth="250.0" />
+            <Button fx:id="ICWorld" layoutX="18.0" layoutY="14.0" mnemonicParsing="false" text="New World" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
